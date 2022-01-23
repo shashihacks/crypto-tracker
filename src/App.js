@@ -56,6 +56,24 @@ function App() {
       <p className='last-updated'>Last updated: {updatedTime} </p>
     </div>
 
+    <div className='coin-cointainer'>
+    <div className='coin-row'>
+      <div className='coin'> 
+          <h2 >&nbsp;</h2> 
+          <h1>Name</h1>
+          <p className='coin-symbol'>Symbol</p>
+      </div>
+
+        <div div className='coin-data'>
+            <p className='coin-price'>Price</p>
+            <p className='coin-voume'>24h Volume</p>
+            <p className='coin-percent'>Price Change</p>
+            <p className='coin-market-cap'>   Market Cap    </p>
+          </div>
+    </div>
+
+</div>
+
     {filteredCoins.map(coin => {
       return (
       <Coin 

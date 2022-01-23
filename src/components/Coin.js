@@ -7,7 +7,8 @@ export default function Coin(props){
 
     return (
         <div className='coin-cointainer'>
-            <div className='coin-row'>
+
+           <div className='coin-row'>
                 <div className='coin'>
                     <img src={image} alt='crypto' />
                     <h1>{name}</h1>
