@@ -18,7 +18,6 @@ function App() {
   
   const  getApiData = () => {
     axios.get(URL).then(response => {
-      console.log(response)
        setCoins(response.data)
    }).catch(err => {
      console.error(err)
@@ -26,7 +25,6 @@ function App() {
   }
   
   useEffect(()=> {
-    console.log("Fetching updated data")
     getApiData()
 
     const interval =  setInterval(() => {
