@@ -1,7 +1,6 @@
-import React, { useState ,useRef, useEffect, useReducer} from 'react'
+import React, { useState , useEffect } from 'react'
 import axios from 'axios';
 import './App.css';
-import { useForm } from './components/useForm';
 import Coin from './components/Coin';
 
 
@@ -32,11 +31,10 @@ function App() {
 
     const interval =  setInterval(() => {
       getApiData();
-      let today = new Date();
-      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      let dateTime = date+' '+time;
-      setUpdatedTime(dateTime)
+      let d = new Date();
+      let datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+      d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2);
+      setUpdatedTime(datestring)
     }, 3000)
 
     return () => clearInterval(interval)
